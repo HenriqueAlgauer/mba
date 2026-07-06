@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Questões e Respostas</title>
+</head>
+<body>
+<h1>Questões e Respostas</h1>
+<h2>A solução apresentada para a lentidão no disparo de emails é manter o email service no mesmo microsserviço de compra de ingressos, mantendo-o síncrono.</h2>
+<ul>
+<li>Verdadeiro.</li>
+<li>Falso.</li>
+</ul>
+<h2>Para a criação de códigos dos ingressos e do QRCode, é verdadeiro afirmar que:</h2>
+<ul>
+<li>Separar as criações de código e QRCode do serviço de compra de ingressos melhora o desempenho do último.</li>
+<li>O microsserviço de geração de códigos e QRCode pode armazenar os novos códigos no S3 da Amazon, por exemplo.</li>
+<li>Todas as opções são verdadeiras</li>
+<li>A criação prévia de códigos e QRCode reduz o tempo de resposta.</li>
+<li>A geração de códigos e QRCode pode ser feita de com regularidade para ficar disponível quando necessário.</li>
+</ul>
+<h2>Criar uma Anti-Corruption Layer para as gateways de pagamentos dão consistência na transação, uma vez que o request não será enviado para uma gateway não esteja funcionando:</h2>
+<ul>
+<li>Falso.</li>
+<li>Verdadeiro.</li>
+</ul>
+<h2>São algumas das premissas estabelecidas no caso apresentado:</h2>
+<ul>
+<li>Gerar ingresso com numeração UUID, com pagamento em cartão de crédito e boleto, com confirmação imediata.</li>
+<li>Permitir alta disponibilidade, com compras apenas por cartão de crédito, confirmação imediata e gerar o ingresso com um código curto e sequencial.</li>
+<li>Não houveram premissas estabelecidas.</li>
+<li>Aceitar apenas cartão de crédito, com confirmação imediata, focando em consistência em relação à alta disponibilidade e gerar o ingresso com um código curto e não-sequencial.</li>
+</ul>
+<h2>Para o processamento das requisições na compra de ingressos, a solução para servidor utilizada foi:</h2>
+<ul>
+<li>AWS Serverless</li>
+<li>GCP Kubernetes.</li>
+<li>Digital Ocean Functions.</li>
+<li>On premise server.</li>
+</ul>
+<h2>Alguns dos pontos críticos para métricas e monitoramento que foram apresentados foram:</h2>
+<ul>
+<li>Orders por segundo, latência e disponibilidade das gateways de pagamento e compras aprovadas vs rejeitadas.</li>
+<li>Compras rejeitadas, latência e logs de mensageiria.</li>
+<li>Compras canceladas, logs de mensageiria e latência.</li>
+<li>Compras aprovadas, espaço utilizado no banco de dados, bandwidth.</li>
+</ul>
+<h2>Os pontos críticos do sistema apresentado são:</h2>
+<ul>
+<li>Instabilidade da gateway, geração de código do ingresso, geração do QRCode, envio de email de confirmação.</li>
+<li>Criação de novos eventos, cadastro de novos usuários e lentidão da mensageira.</li>
+<li>Geração de código do ingresso, atraso na aprovação por boleto e alta latência.</li>
+<li>Instabilidade da gateway, geração do QRCode e atraso na aprovação por boleto.</li>
+</ul>
+</body>
+</html>

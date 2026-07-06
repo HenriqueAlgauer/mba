@@ -1,0 +1,7 @@
+<html><head><style>body { background-color: #FFFFFF; }</style></head><body><p>Algo muito importante sobre a publica&ccedil;&atilde;o dos eventos de integra&ccedil;&atilde;o &eacute; que eles devem ser publicados ap&oacute;s o commit do Unit Of Work, ou seja, eles s&oacute; podem ser publicados depois das regras de neg&oacute;cio serem 100% executadas com sucesso.</p>
+
+<p>Qualquer problema nas regras neg&oacute;cio, far&aacute; as transa&ccedil;&otilde;es serem revertidas e n&atilde;o devem publicados os eventos.</p>
+
+<p>No c&oacute;digo-fonte do Github eu ajustei esta ordem de publica&ccedil;&atilde;o:&nbsp;<a href="https://github.com/devfullcycle/mba-domain-driven-design/blob/main/apps/mba-ddd-venda-ingresso/src/%40core/common/application/application.service.ts#L19-L21">https://github.com/devfullcycle/mba-domain-driven-design/blob/main/apps/mba-ddd-venda-ingresso/src/%40core/common/application/application.service.ts#L19-L21</a>. Aproveitamos que os eventos est&atilde;o registrados nos agregados e disparamos os eventos um a um usando o pattern transactional outbox.</p>
+
+<p>&nbsp;</p></body></html>
